@@ -2,7 +2,11 @@ import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   color: {},
-  global: {},
+  styles: {
+    global: (props: any) => ({
+      "html, body": { bg: "#141414" },
+    }),
+  },
 });
 
 export default theme;

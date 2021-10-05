@@ -32,7 +32,7 @@ const Hero: FC<HeroProps> = () => {
         top={["-80px", "-100px", "-120px"]}
         left="0"
         color="white"
-        mb="-150px"
+        mb={["-40px", "-60px", "-80px"]}
         fontSize={["xl", "2xl", "3xl"]}
       >
         WORLD CLASS MEDICAL <br /> DIAGNOSIS FOR{" "}
