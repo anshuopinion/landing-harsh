@@ -1,5 +1,4 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { Container } from "@chakra-ui/react";
 import Navigation from "components/Navigation/Navigation";
 function MyApp({
   Component,
@@ -11,9 +10,7 @@ function MyApp({
   return (
     <ChakraProvider>
       <Navigation />
-      <Container maxW="container.lg">
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }
