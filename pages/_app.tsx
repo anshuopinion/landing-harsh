@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import "../styles/globals.css";
-
+import { Container } from "@chakra-ui/react";
+import Navigation from "components/Navigation/Navigation";
 function MyApp({
   Component,
   pageProps,
@@ -10,7 +10,10 @@ function MyApp({
 }) {
   return (
     <ChakraProvider>
-      <Component {...pageProps} />
+      <Navigation />
+      <Container maxW="container.lg">
+        <Component {...pageProps} />
+      </Container>
     </ChakraProvider>
   );
 }
