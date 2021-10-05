@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/layout";
 import AboutItem from "components/AboutItem/AboutItem";
 import Hero from "components/Hero/Hero";
+import Product from "components/Product/Product";
 import { aboutItems } from "constant/about";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       {aboutItems.map((item, index) => (
         <AboutItem key={index} item={item} />
       ))}
+      <Product />
     </>
   );
 }

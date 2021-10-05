@@ -20,7 +20,11 @@ const AboutItem: FC<AboutItemProps> = ({
 }) => {
   return (
     <Container maxW="1300px" my="8">
-      <Flex justify="center" direction={isLeft ? "row" : "row-reverse"}>
+      <Flex
+        justify="center"
+        direction={isLeft ? "row" : "row-reverse"}
+        align={isLeft ? "flex-start" : "flex-end"}
+      >
         <Image
           src={image.url}
           alt={image.alt}
