@@ -13,7 +13,7 @@ export default function Home() {
         <AboutItem key={index} item={item} />
       ))}
       <Product />
-      {/* <Investor /> */}
+      <Investor />
     </>
   );
 }

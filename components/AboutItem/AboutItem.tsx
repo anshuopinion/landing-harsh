@@ -40,7 +40,7 @@ const AboutItem: FC<AboutItemProps> = ({
           ml={isLeft ? "12" : "0"}
           mr={isLeft ? "0" : "12"}
         >
-          <Heading color="yellow.400">{heading}</Heading>
+          <Heading color="black">{heading}</Heading>
           <Text fontSize="sm">{text1}</Text>
           <Text fontSize="sm">{text2}</Text>
         </VStack>
