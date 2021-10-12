@@ -1,45 +1,62 @@
-import { Flex, Heading, Stack } from "@chakra-ui/layout";
 import { FC } from "react";
-import heroImage from "assets/images/hero.png";
-import Image from "next/image";
+import {
+  Container,
+  Box,
+  Image,
+  Stack,
+  Flex,
+  VStack,
+  Text,
+  Heading,
+} from "@chakra-ui/react";
 interface HeroProps {}
 
-const Hero: FC<HeroProps> = () => {
+const Hero: FC<HeroProps> = ({}) => {
   return (
     <>
-      <Flex
-        mt="-40px"
-        h={{
-          base: "250px",
-          sm: "350px",
-          md: "450px",
-          lg: "500px",
-          xl: "650px",
-        }}
-      >
-        <Image
-          src={heroImage}
-          alt="hero-image"
-          //   objectFit="cover"
-          //   objectPosition="100% 100%"
-          //   width="1200"
-          //   height="650"
-        />
-      </Flex>
-      <Heading
+      <Container maxW="1300px">
+        <Flex justify="center">
+          <Stack>
+            <Image
+              src="/images/heroBack.png"
+              alt="doctor"
+              height={400}
+              width={400}
+              position="relative"
+              top={410}
+              left={10}
+              zIndex={4}
+              mt={-410}
+            />
+            <Image
+              zIndex={9}
+              src="/images/hero.png"
+              alt="doctor"
+              height={400}
+              position="relative"
+            />
+          </Stack>
+          <Stack align="flex-start" justify="end" mb="150px">
+            <Heading fontSize="5xl">AUTOMATE</Heading>
+            <VStack align="flex-start">
+              <Heading fontSize="2xl">Diagnosis, For Faster Results</Heading>
+              <Text>
+                Bringing Artificial Inteligence Inside Medical World .
+              </Text>
+            </VStack>
+          </Stack>
+        </Flex>
+      </Container>
+      <Stack
+        spacing={0}
         position="relative"
-        // top="-150px"
-        top={["-80px", "-100px", "-120px"]}
-        left="0"
-        color="white"
-        mb={["-40px", "-60px", "-80px"]}
-        fontSize={["xl", "2xl", "3xl"]}
+        top="-100px"
+        mb="-100px"
+        zIndex={5}
       >
-        WORLD CLASS MEDICAL <br /> DIAGNOSIS FOR{" "}
-        <Heading color="yellow.400" as="span" fontSize={["3xl", "4xl", "5xl"]}>
-          HUMAN
-        </Heading>
-      </Heading>
+        <Box bg="brand.500" height={20} />
+        <Box bg="brand.600" height={20} />
+      </Stack>
     </>
   );
 };

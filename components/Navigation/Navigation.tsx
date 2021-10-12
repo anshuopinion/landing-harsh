@@ -13,7 +13,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
   ];
 
   return (
-    <Container maxW="1300p" zIndex={50} position="sticky" top="0" color="white">
+    <Container maxW="1300p" zIndex={50} position="sticky" top="0" color="black">
       <Flex justify="space-between">
         <Flex>
           <Heading fontSize="2xl">Logo</Heading>
