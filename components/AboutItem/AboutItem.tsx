@@ -8,6 +8,7 @@ interface AboutItemProps {
       url: string;
       alt: string;
     };
+    color: string;
     heading: string;
     isLeft: boolean;
     text1: string;
@@ -16,14 +17,14 @@ interface AboutItemProps {
 }
 
 const AboutItem: FC<AboutItemProps> = ({
-  item: { isLeft, image, heading, text1, text2 },
+  item: { isLeft, image, heading, text1, text2, color },
 }) => {
   return (
-    <Container maxW="1300px" my="8">
+    <Container maxW="1300px" bg={color} py="12">
       <Flex
         justify="center"
         direction={isLeft ? "row" : "row-reverse"}
-        align={isLeft ? "flex-start" : "flex-end"}
+        // align={isLeft ? "flex-start" : "flex-end"}
       >
         <Image
           src={image.url}
@@ -34,7 +35,7 @@ const AboutItem: FC<AboutItemProps> = ({
         <VStack
           align="flex-start"
           spacing="8"
-          color="white"
+          color="black"
           maxW="50%"
           ml={isLeft ? "12" : "0"}
           mr={isLeft ? "0" : "12"}

@@ -8,7 +8,7 @@ import { aboutItems } from "constant/about";
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       {aboutItems.map((item, index) => (
         <AboutItem key={index} item={item} />
       ))}
