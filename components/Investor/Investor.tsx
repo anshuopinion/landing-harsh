@@ -38,7 +38,7 @@ const Investor = () => {
           zIndex="0"
           mb="-200px"
         /> */}
-      <Box bg="brand.400">
+      <Box bg="brand.400" id="investor" p={10}>
         <Flex
           maxW="1000px"
           mx="auto"
@@ -46,7 +46,6 @@ const Investor = () => {
           align="center"
           // pos="relative"
           // bottom="350px"
-          p={10}
 
           // direction="row-reverse"
         >
@@ -113,15 +112,15 @@ const Investor = () => {
           </Stack>
         </Flex>
         {/* </Box> */}
-        <Flex px="4" py="4" maxW="1300px" justify="space-evenly" bg="white">
-          <Image src="/icons/airbnb.png" alt="airbnb" />
-          <Image src="/icons/fedex.png" alt="fedex" />
-          <Image src="/icons/google.png" alt="google" />
-          <Image src="/icons/hubspot.png" alt="hubspot" />
-          <Image src="/icons/microsoft.png" alt="microsoft" />
-          <Image src="/icons/walmart.png" alt="walmart" />
-        </Flex>
       </Box>
+      <Flex px="4" py="4" maxW="1300px" justify="space-evenly" bg="white">
+        <Image src="/icons/airbnb.png" alt="airbnb" />
+        <Image src="/icons/fedex.png" alt="fedex" />
+        <Image src="/icons/google.png" alt="google" />
+        <Image src="/icons/hubspot.png" alt="hubspot" />
+        <Image src="/icons/microsoft.png" alt="microsoft" />
+        <Image src="/icons/walmart.png" alt="walmart" />
+      </Flex>
     </>
   );
 };

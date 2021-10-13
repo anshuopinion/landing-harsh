@@ -18,8 +18,8 @@ const Contact: FC<ContactProps> = ({}) => {
   Contact;
 
   return (
-    <Box bg="brand.300" pb="8">
-      <Container maxW="1300px" py={4}>
+    <Box bg="brand.300" p="8" id="contact">
+      <Container maxW="1300px">
         <Heading textAlign="center" py={4}>
           Contact Us
         </Heading>

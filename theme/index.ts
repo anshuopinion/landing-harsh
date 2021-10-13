@@ -43,7 +43,7 @@ const theme = extendTheme(
 
     styles: {
       global: (props: any) => ({
-        "html, body": {},
+        "html, body": { scrollBehavior: "smooth" },
       }),
     },
   },
