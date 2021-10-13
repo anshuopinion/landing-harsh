@@ -67,7 +67,7 @@ const Investor = () => {
             </Text>
           </VStack>
         </Flex>
-        <Stack flex="1" justify="center" height="240px" align="center">
+        <Stack flex="1" justify="center" height="20px" align="center">
           <Flex justify="center">
             <Box pos="relative" left="-50px" top="150px" mb="150px">
               <Box width="20px" height="20px" bg="green.400" />
@@ -75,10 +75,10 @@ const Investor = () => {
             <Box pos="relative" left="-40px" top="50px">
               <Image src="images/invest1.png" alt="invest1" h="150px" />
             </Box>
-            <Box pos="relative" left="-20px" top="20px">
+            <Box pos="relative" left="-20px" top="20px" mb="20px">
               <Image src="/images/invest2.png" alt="invest2" h="150px" />
             </Box>
-            <Box pos="relative" left="-10px" top="80px">
+            <Box pos="relative" left="-10px" top="80px" mb="80px">
               <Box width="50px" height="50px" bg="gray.700" borderRadius="md" />
             </Box>
           </Flex>

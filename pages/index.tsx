@@ -4,7 +4,7 @@ import Hero from "components/Hero/Hero";
 import Investor from "components/Investor/Investor";
 import Product from "components/Product/Product";
 import { aboutItems } from "constant/about";
-
+import Contact from "components/Contact/Contact";
 export default function Home() {
   return (
     <>
@@ -14,6 +14,7 @@ export default function Home() {
       ))}
       <Product />
       <Investor />
+      <Contact />
     </>
   );
 }
