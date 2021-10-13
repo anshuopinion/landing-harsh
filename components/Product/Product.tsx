@@ -19,9 +19,14 @@ const Product: FC<ProductProps> = ({}) => {
     { url: "/images/pThumb3.png", alt: "thumb3" },
   ];
   return (
-    <Box bg="brand.600" py="12">
-      <Container maxW="800px" justifyContent="space-between" display="flex">
-        <VStack align="flex-start" spacing="8">
+    <Box bg="brand.600" p="12">
+      <Container
+        maxW="1000px"
+        justifyContent="space-between"
+        display="flex"
+        p="4"
+      >
+        <VStack align="flex-start" justify="center" spacing="8">
           <Heading fontSize="4xl">Product</Heading>
           <VStack align="flex-start" spacing="4">
             <Heading fontSize="2xl">Product Benifts</Heading>
