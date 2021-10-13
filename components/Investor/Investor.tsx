@@ -106,6 +106,14 @@ const Investor = () => {
         </Stack>
       </Flex>
       {/* </Box> */}
+      <Flex px="4" py="4" maxW="1300px" justify="space-evenly">
+        <Image src="/icons/airbnb.png" alt="airbnb" />
+        <Image src="/icons/fedex.png" alt="fedex" />
+        <Image src="/icons/google.png" alt="google" />
+        <Image src="/icons/hubspot.png" alt="hubspot" />
+        <Image src="/icons/microsoft.png" alt="microsoft" />
+        <Image src="/icons/walmart.png" alt="walmart" />
+      </Flex>
     </>
   );
 };
