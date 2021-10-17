@@ -2,6 +2,7 @@ import { Image } from "@chakra-ui/image";
 import {
   Box,
   Container,
+  Flex,
   Heading,
   HStack,
   Text,
@@ -19,14 +20,20 @@ const Product: FC<ProductProps> = ({}) => {
     { url: "/images/pThumb3.png", alt: "thumb3" },
   ];
   return (
-    <Box bg="brand.600" p="12" id="product">
+    <Box bg="brand.600" p={{ base: "0", md: "12" }} id="product">
       <Container
         maxW="1000px"
         justifyContent="space-between"
         display="flex"
         p="4"
+        flexDirection={{ base: "column", sm: "row" }}
       >
-        <VStack align="flex-start" justify="center" spacing="8">
+        <VStack
+          align="flex-start"
+          justify="center"
+          spacing="8"
+          mb={{ base: 8, md: 0 }}
+        >
           <Fade direction="up" cascade duration={500}>
             <Heading fontSize="4xl">Product</Heading>
             <VStack align="flex-start" spacing="4">
@@ -57,9 +64,15 @@ const Product: FC<ProductProps> = ({}) => {
             </HStack>
           </Fade>
         </VStack>
-        <Zoom>
-          <Image src="/images/product1.png" alt="product" h="400px" />
-        </Zoom>
+        <Flex as={Zoom} bg="red">
+          <Image
+            src="/images/product1.png"
+            objectFit="cover"
+            objectPosition="center"
+            alt="product"
+            maxH={{ base: "auto", md: "500px" }}
+          />
+        </Flex>
       </Container>
     </Box>
   );

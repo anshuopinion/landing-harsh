@@ -16,8 +16,8 @@ export default function Home() {
           <AboutItem key={index} item={item} />
         ))}
       </Box>
-      {/* 
       <Product />
+      {/* 
       <Investor />
       <Contact /> */}
       {/* <Footer /> */}
