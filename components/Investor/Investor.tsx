@@ -10,9 +10,19 @@ import {
   Heading,
   Text,
   HStack,
+  keyframes,
+  usePrefersReducedMotion,
 } from "@chakra-ui/react";
 
 const Investor = () => {
+  const autoScroll = keyframes`
+  from { left: 0; }
+  to { left: -100%; }
+`;
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const animation = prefersReducedMotion
+    ? undefined
+    : `${autoScroll} infinite 20s linear`;
   return (
     <>
       {/* <Box pos="relative" top="-50px"> */}
@@ -169,7 +179,12 @@ const Investor = () => {
         maxW="1300px"
         justify="space-evenly"
         bg="white"
-        overflow={{ base: "scroll", md: "hidden" }}
+        // width="200%"
+        // animation={animation}
+        // transform="translate(0px,50%)"
+        // overflow="hidden"
+
+        // overflow={{ base: "scroll", md: "hidden" }}
       >
         <Image mx="4" src="/icons/airbnb.png" alt="airbnb" />
         <Image mx="4" src="/icons/fedex.png" alt="fedex" />
