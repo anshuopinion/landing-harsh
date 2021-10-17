@@ -1,7 +1,11 @@
 export const aboutItems = [
   {
     color: "brand.400",
-    image: { url: "/images/about1.png", alt: "about1" },
+    image: {
+      url: "/images/about1.png",
+      url2: "/images/about1N.png",
+      alt: "about1",
+    },
     heading: "Vision",
     isLeft: true,
     text1:
@@ -12,7 +16,11 @@ export const aboutItems = [
   {
     color: "brand.500",
 
-    image: { url: "/images/about2.png", alt: "about2" },
+    image: {
+      url: "/images/about2.png",
+      url2: "/images/about2N.png",
+      alt: "about2",
+    },
     heading: "Mission",
     text1:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, omnisquibusdam deleniti atque pariatur natus rerum? Recusandae ducimusquidem repudiandae facilis eos dignissimos voluptas quas dolores. Autem molestiae quisquam rerum?",
