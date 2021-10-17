@@ -9,14 +9,7 @@ import {
   Text,
   Heading,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import {
-  AttentionSeeker,
-  Fade,
-  Hinge,
-  Slide,
-  Zoom,
-} from "react-awesome-reveal";
+import { AttentionSeeker, Fade, Slide } from "react-awesome-reveal";
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
@@ -24,7 +17,7 @@ const Hero: FC<HeroProps> = ({}) => {
     <>
       <Container maxW="1300px" id="home">
         <Flex justify="center">
-          <Stack as={motion.div}>
+          <Stack overflow="hidden">
             <AttentionSeeker effect="jello">
               <Box>
                 <Image
@@ -71,26 +64,16 @@ const Hero: FC<HeroProps> = ({}) => {
         </Flex>
       </Container>
       <Stack spacing={0}>
-        <Slide direction="right">
-          <Box
-            bg="brand.500"
-            height={20}
-            position="relative"
-            top="-100px"
-            mb="-100px"
-          />
-        </Slide>
-        <Slide direction="left">
-          <Box
-            // as={Slide}
-            bg="brand.600"
-            height={20}
-            position="relative"
-            zIndex={20}
-            top="-20px"
-            mb="-20px"
-          />
-        </Slide>
+        <Box overflow="hidden" position="relative" top="-100px" mb="-100px">
+          <Slide direction="right">
+            <Box bg="brand.500" height={20} />
+          </Slide>
+        </Box>
+        <Box overflow="hidden" position="relative">
+          <Slide direction="left">
+            <Box bg="brand.600" height={20} position="relative" zIndex={20} />
+          </Slide>
+        </Box>
       </Stack>
     </>
   );

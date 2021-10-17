@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from "react";
 import { Heading, Text } from "@chakra-ui/layout";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { Fade, Slide } from "react-awesome-reveal";
 interface NavigationProps {}
 
 const Navigation: FC<NavigationProps> = ({}) => {
@@ -32,6 +33,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
       position="sticky"
       top="0"
       color={scroll ? "white" : "black"}
+      transition="all 0.5s ease-in-out"
       p="2"
       bg={scroll ? "brand.800" : "transparent"}
     >
@@ -39,15 +41,17 @@ const Navigation: FC<NavigationProps> = ({}) => {
         <Flex>
           <Heading fontSize="2xl">Logo</Heading>
         </Flex>
-        <Flex>
-          {navItems.map((item) => (
-            <NavItem
-              scroll={scroll}
-              link={item.link}
-              name={item.name}
-              key={item.name}
-            />
-          ))}
+        <Flex overflow="hidden">
+          <Fade cascade direction="top-right" duration={300}>
+            {navItems.map((item) => (
+              <NavItem
+                scroll={scroll}
+                link={item.link}
+                name={item.name}
+                key={item.name}
+              />
+            ))}
+          </Fade>
         </Flex>
       </Flex>
     </Container>
@@ -79,7 +83,8 @@ const NavItem = ({
         _hover={{ borderBottom: "2px solid", borderColor: "brand.400" }}
       >
         <Text
-          fontSize="lg"
+          textTransform="uppercase"
+          fontSize="md"
           color={!scroll ? "black" : isActive ? "brand.600" : "white"}
           _hover={{ color: "brand.600" }}
           fontWeight="semibold"
