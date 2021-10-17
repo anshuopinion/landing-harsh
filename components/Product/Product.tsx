@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   HStack,
-  //   HStack,
   Text,
   VStack,
 } from "@chakra-ui/layout";
