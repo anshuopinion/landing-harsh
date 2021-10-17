@@ -19,7 +19,7 @@ const Product: FC<ProductProps> = ({}) => {
     { url: "/images/pThumb3.png", alt: "thumb3" },
   ];
   return (
-    <Box bg="brand.600" p="12">
+    <Box bg="brand.600" p="12" id="product">
       <Container
         maxW="1000px"
         justifyContent="space-between"

@@ -18,7 +18,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
     }
   }, [setScroll, router]);
   const navItems = [
-    { name: "Home", link: "/#home" },
+    { name: "Home", link: "/" },
     { name: "About", link: "/#about" },
     { name: "Product", link: "/#product" },
     { name: "Investor", link: "/#investor" },

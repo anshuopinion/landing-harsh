@@ -22,7 +22,7 @@ interface HeroProps {}
 const Hero: FC<HeroProps> = ({}) => {
   return (
     <>
-      <Container maxW="1300px">
+      <Container maxW="1300px" id="home">
         <Flex justify="center">
           <Stack as={motion.div}>
             <AttentionSeeker effect="jello">
