@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <Box id="about">
+      <Box id="about">
         {aboutItems.map((item, index) => (
           <AboutItem key={index} item={item} />
         ))}
       </Box>
-      <Product />
+      {/* <Product />
       <Investor />
       <Contact />
       <Footer /> */}

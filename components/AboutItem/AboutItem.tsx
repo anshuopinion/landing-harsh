@@ -26,6 +26,7 @@ const AboutItem: FC<AboutItemProps> = ({
           justify="center"
           direction={isLeft ? "row" : "row-reverse"}
           // align={isLeft ? "flex-start" : "flex-end"}
+          overflow="hidden"
         >
           <Zoom direction={isLeft ? "left" : "right"} fraction={0.3}>
             <Image

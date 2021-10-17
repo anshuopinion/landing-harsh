@@ -69,9 +69,9 @@ const Hero: FC<HeroProps> = ({}) => {
             <Box bg="brand.500" height={20} />
           </Slide>
         </Box>
-        <Box overflow="hidden" position="relative">
+        <Box overflow="hidden" position="relative" zIndex={20}>
           <Slide direction="left">
-            <Box bg="brand.600" height={20} position="relative" zIndex={20} />
+            <Box bg="brand.600" height={20} />
           </Slide>
         </Box>
       </Stack>
