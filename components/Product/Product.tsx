@@ -50,7 +50,7 @@ const Product: FC<ProductProps> = ({}) => {
                 accusantiu.
               </Text>
             </VStack>
-            <HStack spacing="6">
+            <HStack spacing="6" overflow="hidden">
               <Slide direction="right" cascade duration={500}>
                 {productImages.map((image) => (
                   <Image

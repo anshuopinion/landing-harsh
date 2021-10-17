@@ -42,85 +42,142 @@ const Investor = () => {
         <Flex
           maxW="1000px"
           mx="auto"
-          height="400px"
+          height={{ base: "500px", md: "400px" }}
           align="center"
-          // pos="relative"
-          // bottom="350px"
-
-          // direction="row-reverse"
+          direction={{ base: "column", md: "row" }}
         >
-          <Flex
-            flex="1"
-            color="black"
-            justify="space-between"
-            align="flex-end"
-            h="200px"
-          >
-            <VStack align="start" spacing={3} mt="4" justify="end">
+          <Flex flex="1" color="black">
+            <VStack align="start" spacing={3} mt="4" justify="start">
               <Heading fontSize="4xl"> Happy Investors</Heading>
               <Text fontSize="sm" maxW={64}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
               </Text>
             </VStack>
           </Flex>
-          <Stack flex="1" justify="center" height="20px" align="center">
-            <Flex justify="center" pos="relative" left="50px">
-              <Box pos="relative" left="-50px" top="150px" mb="150px">
-                <Box width="20px" height="20px" bg="green.400" />
-              </Box>
-              <Box pos="relative" left="-40px" top="50px">
-                <Image src="images/invest1.png" alt="invest1" h="150px" />
-              </Box>
-              <Box pos="relative" left="-20px" top="20px" mb="20px">
-                <Image src="/images/invest2.png" alt="invest2" h="150px" />
-              </Box>
-              <Box pos="relative" left="-10px" top="80px" mb="80px">
-                <Box
-                  width="50px"
-                  height="50px"
-                  bg="gray.700"
-                  borderRadius="md"
-                />
-              </Box>
-            </Flex>
-            <Flex pos="relative" left="50px">
-              <Box pos="relative" left="-60px" top="40px" mb="40px">
-                <Box
-                  width="50px"
-                  height="50px"
-                  bg="gray.700"
-                  borderRadius="md"
-                />
-              </Box>
-              <Box pos="relative" top="40px" left="-50px" mb="40px">
-                <Image src="/images/invest3.png" alt="invest3" h="150px" />
-              </Box>
-              <Box pos="relative" top="10px" mb="10px" left="-30px">
-                <Image src="/images/invest4.png" alt="invest4" h="150px" />
+          <Stack
+            flex="1"
+            justify="center"
+            height="400px"
+            align="center"
+            width="90%"
+          >
+            <Flex pos="relative" left={{ base: "30px", md: "60px" }}>
+              <Box
+                pos="relative"
+                left={{ base: "-30px", md: "-60px" }}
+                ml={{ base: "-30px", md: "-60px" }}
+                top={{ base: "60px", md: "150px" }}
+                mb={{ base: "60px", md: "150px" }}
+                width={{ base: "5vw" }}
+                height={{ base: "5vw" }}
+                maxH="25px"
+                maxW="25px"
+                bg="green.400"
+              />
+
+              <Box
+                pos="relative"
+                left={{ base: "-10px", md: "-20px" }}
+                ml={{ base: "-10px", md: "-20px" }}
+                top={{ base: "0", md: "50px" }}
+              >
+                <Image src="images/invest1.png" alt="invest1" maxH="150px" />
               </Box>
               <Box
                 pos="relative"
-                left="-180px"
-                top="180px"
-                mb="180px"
-                bg="red"
-                // mr="180px"
+                left={{ base: "0", md: "0" }}
+                ml={{ base: "0", md: "0" }}
+                top={{ base: "-20px", md: "20px" }}
+                mb={{ base: "-20px", md: "20px" }}
               >
-                <Box width="30px" height="30px" bg="red" borderRadius="xl" />
+                <Image src="/images/invest2.png" alt="invest2" maxH="150px" />
               </Box>
+
+              <Box
+                pos="relative"
+                left={{ base: "5px" }}
+                ml={{ base: "5px" }}
+                top={{ base: "40px", md: "80px" }}
+                mb={{ base: "40px", md: "80px" }}
+                width={{ base: "10vw" }}
+                height={{ base: "10vw" }}
+                maxH="50px"
+                maxW="50px"
+                bg="gray.700"
+                borderRadius="md"
+              />
+            </Flex>
+            <Flex
+              pos="relative"
+              left={{ base: "10px", md: "-50px" }}
+              ml={{ base: "10px", md: "-50px" }}
+            >
+              <Box
+                pos="relative"
+                left={{ base: "-10px", md: "20px" }}
+                ml={{ base: "-10px", md: "20px" }}
+                top={{ base: "40px" }}
+                mb={{ base: "40px" }}
+                width={{ base: "10vw" }}
+                height={{ base: "10vw" }}
+                maxH="50px"
+                maxW="50px"
+                bg="gray.700"
+                borderRadius="md"
+              />
+
+              <Box
+                pos="relative"
+                left={{ base: "0", md: "20px" }}
+                ml={{ base: "0", md: "20px" }}
+                top={{ base: "0", md: "40px" }}
+                mb={{ base: "0", md: "40px" }}
+              >
+                <Image src="/images/invest3.png" alt="invest3" maxH="150px" />
+              </Box>
+              <Box
+                pos="relative"
+                left={{ base: "10px", md: "20px" }}
+                ml={{ base: "0", md: "20px" }}
+                top={{ base: "-15px", md: "10px" }}
+                mb={{ base: "0", md: "10px" }}
+              >
+                <Image src="/images/invest4.png" alt="invest4" maxH="150px" />
+              </Box>
+
+              <Box
+                pos="relative"
+                left={{ base: "15px", md: "-70px" }}
+                ml={{ base: "", md: "-70px" }}
+                top={{ base: "50px", md: "180px" }}
+                mb={{ base: "", md: "180px" }}
+                width={{ base: "5vw" }}
+                height={{ base: "5vw" }}
+                maxH="25px"
+                maxW="25px"
+                borderRadius="md"
+                bg="red"
+              />
             </Flex>
           </Stack>
         </Flex>
         {/* </Box> */}
       </Box>
-      <Flex px="4" py="4" maxW="1300px" justify="space-evenly" bg="white">
-        <Image src="/icons/airbnb.png" alt="airbnb" />
-        <Image src="/icons/fedex.png" alt="fedex" />
-        <Image src="/icons/google.png" alt="google" />
-        <Image src="/icons/hubspot.png" alt="hubspot" />
-        <Image src="/icons/microsoft.png" alt="microsoft" />
-        <Image src="/icons/walmart.png" alt="walmart" />
-      </Flex>
+      {/* <Flex
+        px="4"
+        py="4"
+        maxW="1300px"
+        justify="space-evenly"
+        bg="white"
+        overflow={{ base: "scroll", md: "hidden" }}
+      >
+        <Image mx="4" src="/icons/airbnb.png" alt="airbnb" />
+        <Image mx="4" src="/icons/fedex.png" alt="fedex" />
+        <Image mx="4" src="/icons/google.png" alt="google" />
+        <Image mx="4" src="/icons/hubspot.png" alt="hubspot" />
+        <Image mx="4" src="/icons/microsoft.png" alt="microsoft" />
+        <Image mx="4" src="/icons/walmart.png" alt="walmart" />
+      </Flex> */}
     </>
   );
 };

@@ -17,8 +17,8 @@ export default function Home() {
         ))}
       </Box>
       <Product />
-      {/* 
       <Investor />
+      {/* 
       <Contact /> */}
       {/* <Footer /> */}
     </>
