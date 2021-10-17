@@ -16,10 +16,10 @@ export default function Home() {
           <AboutItem key={index} item={item} />
         ))}
       </Box>
-      {/* <Product />
+      <Product />
       <Investor />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
