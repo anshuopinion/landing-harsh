@@ -1,7 +1,7 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Container, Flex, Heading, Text, VStack } from "@chakra-ui/layout";
 import { FC } from "react";
-
+import { Fade, Reveal, Zoom } from "react-awesome-reveal";
 interface AboutItemProps {
   item: {
     image: {
@@ -27,12 +27,14 @@ const AboutItem: FC<AboutItemProps> = ({
           direction={isLeft ? "row" : "row-reverse"}
           // align={isLeft ? "flex-start" : "flex-end"}
         >
-          <Image
-            src={image.url}
-            alt={image.alt}
-            height="400px"
-            //   width="420px"
-          />
+          <Zoom direction={isLeft ? "left" : "right"} fraction={0.3}>
+            <Image
+              src={image.url}
+              alt={image.alt}
+              height="400px"
+              //   width="420px"
+            />
+          </Zoom>
           <VStack
             align="flex-start"
             spacing="8"
@@ -41,9 +43,13 @@ const AboutItem: FC<AboutItemProps> = ({
             ml={isLeft ? "12" : "0"}
             mr={isLeft ? "0" : "12"}
           >
-            <Heading color="black">{heading}</Heading>
-            <Text fontSize="sm">{text1}</Text>
-            <Text fontSize="sm">{text2}</Text>
+            <Fade direction={!isLeft ? "left" : "right"}>
+              <Heading textTransform="uppercase" color="black">
+                {heading}
+              </Heading>
+              <Text fontSize="sm">{text1}</Text>
+              <Text fontSize="sm">{text2}</Text>
+            </Fade>
           </VStack>
         </Flex>
       </Container>

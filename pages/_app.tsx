@@ -1,6 +1,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Navigation from "components/Navigation/Navigation";
 import theme from "theme";
+
 function MyApp({
   Component,
   pageProps,
