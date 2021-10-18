@@ -17,13 +17,7 @@ const Contact: FC<ContactProps> = ({}) => {
   Contact;
 
   return (
-    <Box
-      bg="brand.300"
-      p={{ base: 0, md: 8 }}
-      id="contact"
-      py="4"
-      height="100vh"
-    >
+    <Box bg="brand.300" p={{ base: 0, md: 8 }} id="contact" py="8">
       <Container maxW="1300px">
         <Heading textAlign="center" py={4}>
           Contact Us
