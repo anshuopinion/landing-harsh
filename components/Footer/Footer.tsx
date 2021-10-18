@@ -7,8 +7,12 @@ const Footer: FC<FooterProps> = ({}) => {
   return (
     <Box bg="brand.800">
       <Container maxW="1300px">
-        <Flex justify="space-between" p="8">
-          <Stack color="white" maxW="400px" spacing={4}>
+        <Flex
+          justify="space-between"
+          p={{ base: 2, md: 8 }}
+          direction={{ base: "column-reverse", md: "row" }}
+        >
+          <Stack my={{ base: 4, md: 0 }} color="white" maxW="400px" spacing={4}>
             <Heading as="h3" size="md">
               Company Name
             </Heading>
@@ -20,7 +24,7 @@ const Footer: FC<FooterProps> = ({}) => {
             </Text>
             <Text>Copyright 2021 Company Name</Text>
           </Stack>
-          <Stack color="white" maxW="300px" spacing={4}>
+          <Stack my={{ base: 4, md: 0 }} color="white" maxW="300px" spacing={4}>
             <Heading as="h3" size="md">
               Want to connect?
             </Heading>
