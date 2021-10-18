@@ -4,6 +4,7 @@ import { FC } from "react";
 import { Fade, Reveal, Zoom } from "react-awesome-reveal";
 interface AboutItemProps {
   item: {
+    id: string;
     image: {
       url: string;
       url2: string;
@@ -18,10 +19,10 @@ interface AboutItemProps {
 }
 
 const AboutItem: FC<AboutItemProps> = ({
-  item: { isLeft, image, heading, text1, text2, color },
+  item: { isLeft, image, heading, text1, text2, color, id },
 }) => {
   return (
-    <Box bg={color}>
+    <Box bg={color} id={id} py="4">
       <Container maxW="1300px" py="12">
         <Flex
           justify="center"

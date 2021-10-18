@@ -11,7 +11,7 @@ function MyApp({
 }) {
   return (
     <ChakraProvider theme={theme}>
-      {/* <Navigation /> */}
+      <Navigation />
       <Component {...pageProps} />
     </ChakraProvider>
   );

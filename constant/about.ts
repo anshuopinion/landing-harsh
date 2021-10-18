@@ -1,5 +1,6 @@
 export const aboutItems = [
   {
+    id: "about",
     color: "brand.400",
     image: {
       url: "/images/about1.png",
@@ -14,6 +15,7 @@ export const aboutItems = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, omnis quibusdam deleniti atque pariatur natus rerum? Recusandae ducimusquidem repudiandae facilis eos dignissimos voluptas quas dolores. Autem molestiae quisquam rerum?",
   },
   {
+    id: "",
     color: "brand.500",
 
     image: {

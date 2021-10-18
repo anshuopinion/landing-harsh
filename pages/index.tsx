@@ -1,4 +1,3 @@
-import { Box, Flex } from "@chakra-ui/layout";
 import AboutItem from "components/AboutItem/AboutItem";
 import Hero from "components/Hero/Hero";
 import Investor from "components/Investor/Investor";
@@ -11,11 +10,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Box id="about">
-        {aboutItems.map((item, index) => (
-          <AboutItem key={index} item={item} />
-        ))}
-      </Box>
+
+      {aboutItems.map((item, index) => (
+        <AboutItem key={index} item={item} />
+      ))}
+
       <Product />
       <Investor />
 
