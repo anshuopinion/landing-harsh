@@ -9,20 +9,9 @@ import {
   VStack,
   Heading,
   Text,
-  HStack,
-  keyframes,
-  usePrefersReducedMotion,
 } from "@chakra-ui/react";
-
+import Marquee from "react-fast-marquee";
 const Investor = () => {
-  const autoScroll = keyframes`
-  from { left: 0; }
-  to { left: -100%; }
-`;
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const animation = prefersReducedMotion
-    ? undefined
-    : `${autoScroll} infinite 20s linear`;
   return (
     <>
       {/* <Box pos="relative" top="-50px"> */}
@@ -173,26 +162,31 @@ const Investor = () => {
         </Flex>
         {/* </Box> */}
       </Box>
-      {/* <Flex
-        px="4"
-        py="4"
-        maxW="1300px"
-        justify="space-evenly"
-        bg="white"
-        // width="200%"
-        // animation={animation}
-        // transform="translate(0px,50%)"
-        // overflow="hidden"
+      {/* <marquee behavior="scroll" direction="left"> */}
+      <Marquee speed={100} pauseOnHover>
+        <Flex
+          px="8"
+          py="4"
+          // maxW="1300px"
+          justify="space-evenly"
+          bg="white"
 
-        // overflow={{ base: "scroll", md: "hidden" }}
-      >
-        <Image mx="4" src="/icons/airbnb.png" alt="airbnb" />
-        <Image mx="4" src="/icons/fedex.png" alt="fedex" />
-        <Image mx="4" src="/icons/google.png" alt="google" />
-        <Image mx="4" src="/icons/hubspot.png" alt="hubspot" />
-        <Image mx="4" src="/icons/microsoft.png" alt="microsoft" />
-        <Image mx="4" src="/icons/walmart.png" alt="walmart" />
-      </Flex> */}
+          // pos="relative"
+          // left="-250px"
+          // right="0"
+          // width="200%"
+          // animation={animation}
+        >
+          <Image mx="10" src="/icons/airbnb.png" alt="airbnb" />
+          <Image mx="10" src="/icons/fedex.png" alt="fedex" />
+          <Image mx="10" src="/icons/google.png" alt="google" />
+          <Image mx="10" src="/icons/hubspot.png" alt="hubspot" />
+          <Image mx="10" src="/icons/microsoft.png" alt="microsoft" />
+          <Image mx="10" src="/icons/walmart.png" alt="walmart" />
+        </Flex>
+      </Marquee>
+
+      {/* </marquee> */}
     </>
   );
 };
