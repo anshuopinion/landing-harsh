@@ -11,6 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Marquee from "react-fast-marquee";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 const Investor = () => {
   return (
     <>
@@ -53,110 +54,126 @@ const Investor = () => {
               </Text>
             </VStack>
           </Flex>
+
           <Stack
             flex="1"
             justify="center"
             height="400px"
             align="center"
-            width="90%"
+            width="100%"
+            overflow={{ base: "visible", md: "hidden" }}
           >
             <Flex pos="relative" left={{ base: "30px", md: "60px" }}>
-              <Box
-                pos="relative"
-                left={{ base: "-30px", md: "-60px" }}
-                ml={{ base: "-30px", md: "-60px" }}
-                top={{ base: "60px", md: "150px" }}
-                mb={{ base: "60px", md: "150px" }}
-                width={{ base: "5vw" }}
-                height={{ base: "5vw" }}
-                maxH="25px"
-                maxW="25px"
-                bg="green.400"
-              />
+              <Zoom direction="right">
+                <Box
+                  zIndex="20"
+                  pos="relative"
+                  left={{ base: "-30px", md: "-60px" }}
+                  ml={{ base: "-30px", md: "-60px" }}
+                  top={{ base: "60px", md: "150px" }}
+                  mb={{ base: "60px", md: "150px" }}
+                  width={{ base: "5vw" }}
+                  height={{ base: "5vw" }}
+                  maxH="25px"
+                  maxW="25px"
+                  bg="green.400"
+                />
+              </Zoom>
 
-              <Box
-                pos="relative"
-                left={{ base: "-10px", md: "-20px" }}
-                ml={{ base: "-10px", md: "-20px" }}
-                top={{ base: "0", md: "50px" }}
-              >
-                <Image src="images/invest1.png" alt="invest1" maxH="150px" />
-              </Box>
-              <Box
-                pos="relative"
-                left={{ base: "0", md: "0" }}
-                ml={{ base: "0", md: "0" }}
-                top={{ base: "-20px", md: "20px" }}
-                mb={{ base: "-20px", md: "20px" }}
-              >
-                <Image src="/images/invest2.png" alt="invest2" maxH="150px" />
-              </Box>
-
-              <Box
-                pos="relative"
-                left={{ base: "5px" }}
-                ml={{ base: "5px" }}
-                top={{ base: "40px", md: "80px" }}
-                mb={{ base: "40px", md: "80px" }}
-                width={{ base: "10vw" }}
-                height={{ base: "10vw" }}
-                maxH="50px"
-                maxW="50px"
-                bg="gray.700"
-                borderRadius="md"
-              />
+              <Fade direction="top-left">
+                <Box
+                  pos="relative"
+                  left={{ base: "-10px", md: "-20px" }}
+                  ml={{ base: "-10px", md: "-20px" }}
+                  top={{ base: "0", md: "50px" }}
+                >
+                  <Image src="images/invest1.png" alt="invest1" maxH="150px" />
+                </Box>
+              </Fade>
+              <Fade direction="top-right">
+                <Box
+                  pos="relative"
+                  left={{ base: "0", md: "0" }}
+                  ml={{ base: "0", md: "0" }}
+                  top={{ base: "-20px", md: "20px" }}
+                  mb={{ base: "-20px", md: "20px" }}
+                >
+                  <Image src="/images/invest2.png" alt="invest2" maxH="150px" />
+                </Box>
+              </Fade>
+              <Fade direction="right">
+                <Box
+                  pos="relative"
+                  left={{ base: "5px" }}
+                  ml={{ base: "5px" }}
+                  top={{ base: "40px", md: "80px" }}
+                  mb={{ base: "40px", md: "80px" }}
+                  width={{ base: "10vw" }}
+                  height={{ base: "10vw" }}
+                  maxH="50px"
+                  maxW="50px"
+                  bg="gray.700"
+                  borderRadius="md"
+                />
+              </Fade>
             </Flex>
             <Flex
               pos="relative"
               left={{ base: "10px", md: "-50px" }}
               ml={{ base: "10px", md: "-50px" }}
             >
-              <Box
-                pos="relative"
-                left={{ base: "-10px", md: "20px" }}
-                ml={{ base: "-10px", md: "20px" }}
-                top={{ base: "40px" }}
-                mb={{ base: "40px" }}
-                width={{ base: "10vw" }}
-                height={{ base: "10vw" }}
-                maxH="50px"
-                maxW="50px"
-                bg="gray.700"
-                borderRadius="md"
-              />
-
-              <Box
-                pos="relative"
-                left={{ base: "0", md: "20px" }}
-                ml={{ base: "0", md: "20px" }}
-                top={{ base: "0", md: "40px" }}
-                mb={{ base: "0", md: "40px" }}
-              >
-                <Image src="/images/invest3.png" alt="invest3" maxH="150px" />
-              </Box>
-              <Box
-                pos="relative"
-                left={{ base: "10px", md: "20px" }}
-                ml={{ base: "0", md: "20px" }}
-                top={{ base: "-15px", md: "10px" }}
-                mb={{ base: "0", md: "10px" }}
-              >
-                <Image src="/images/invest4.png" alt="invest4" maxH="150px" />
-              </Box>
-
-              <Box
-                pos="relative"
-                left={{ base: "15px", md: "-70px" }}
-                ml={{ base: "", md: "-70px" }}
-                top={{ base: "50px", md: "180px" }}
-                mb={{ base: "", md: "180px" }}
-                width={{ base: "5vw" }}
-                height={{ base: "5vw" }}
-                maxH="25px"
-                maxW="25px"
-                borderRadius="md"
-                bg="red"
-              />
+              <Fade direction="left">
+                <Box
+                  pos="relative"
+                  left={{ base: "-10px", md: "20px" }}
+                  ml={{ base: "-10px", md: "20px" }}
+                  top={{ base: "40px" }}
+                  mb={{ base: "40px" }}
+                  width={{ base: "10vw" }}
+                  height={{ base: "10vw" }}
+                  maxH="50px"
+                  maxW="50px"
+                  bg="gray.700"
+                  borderRadius="md"
+                />
+              </Fade>
+              <Fade direction="bottom-left">
+                <Box
+                  pos="relative"
+                  left={{ base: "0", md: "20px" }}
+                  ml={{ base: "0", md: "20px" }}
+                  top={{ base: "0", md: "40px" }}
+                  mb={{ base: "0", md: "40px" }}
+                >
+                  <Image src="/images/invest3.png" alt="invest3" maxH="150px" />
+                </Box>
+              </Fade>
+              <Fade direction="bottom-right">
+                <Box
+                  pos="relative"
+                  left={{ base: "10px", md: "20px" }}
+                  ml={{ base: "0", md: "20px" }}
+                  top={{ base: "-15px", md: "10px" }}
+                  mb={{ base: "0", md: "10px" }}
+                >
+                  <Image src="/images/invest4.png" alt="invest4" maxH="150px" />
+                </Box>
+              </Fade>
+              <Fade direction="bottom-left">
+                <Box
+                  pos="relative"
+                  left={{ base: "15px", md: "-70px" }}
+                  ml={{ base: "", md: "-70px" }}
+                  top={{ base: "50px", md: "180px" }}
+                  mb={{ base: "", md: "180px" }}
+                  width={{ base: "5vw" }}
+                  height={{ base: "5vw" }}
+                  maxH="25px"
+                  maxW="25px"
+                  borderRadius="md"
+                  bg="red"
+                />
+              </Fade>
             </Flex>
           </Stack>
         </Flex>
