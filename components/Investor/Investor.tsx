@@ -47,12 +47,15 @@ const Investor = () => {
           direction={{ base: "column", md: "row" }}
         >
           <Flex flex="1" color="black">
-            <VStack align="start" spacing={3} mt="4" justify="start">
-              <Heading fontSize="4xl"> Happy Investors</Heading>
-              <Text fontSize="sm" maxW={64}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
-              </Text>
-            </VStack>
+            <Fade direction="up">
+              <VStack align="start" spacing={3} mt="4" justify="start">
+                <Heading fontSize="4xl"> Happy Investors</Heading>
+                <Text fontSize="sm" maxW={64}>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolor,
+                </Text>
+              </VStack>
+            </Fade>
           </Flex>
 
           <Stack
@@ -64,7 +67,7 @@ const Investor = () => {
             overflow={{ base: "visible", md: "hidden" }}
           >
             <Flex pos="relative" left={{ base: "30px", md: "60px" }}>
-              <Zoom direction="right">
+              <Zoom direction="right" fraction={0.2}>
                 <Box
                   zIndex="20"
                   pos="relative"
